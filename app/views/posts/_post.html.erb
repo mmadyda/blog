@@ -1,12 +1,16 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
+<div calss="card">
+<div class="card-body">
+  <h3 class="card-title">
+    <strong>
     <%= post.title %>
-  </p>
+    </strong>
+  </h3>
+  <%if post.category.present?%>
+    <%=link_to post.category.name, posts_path(category_id: post.category.id )%>
+  <% end %>
 
-  <p>
-    <strong>Body:</strong>
+  <p class="card-text">
     <%= post.body %>
   </p>
-
+</div>
 </div>
