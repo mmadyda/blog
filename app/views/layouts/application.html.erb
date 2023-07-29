@@ -9,6 +9,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= button_to "Wyloguj się", destroy_user_session_path, method: :delete%>
   </head>
 
   <body>

@@ -27,6 +27,9 @@
     <%= link_to "Back to posts", posts_path %>
 
     <%= button_to "Destroy this post", @post, method: :delete %>
-
+<% if user_signed_in? %>
  <%= render "comments/form", post: @post, comment: @post.comments.new %>
+ <% else %>
+  <%= link_to "Musisz sie zalogować", new_user_session_path%>
+ <% end %>
 </div>
